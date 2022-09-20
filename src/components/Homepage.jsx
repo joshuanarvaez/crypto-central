@@ -7,13 +7,15 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 
 import { Cryptocurrencies, News } from '../components';
 
+import Loader from './Loader';
+
 const { Title } = Typography; //destructure so we can say Title instead of Typography.Title
 
 const Homepage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);//Call as a hook. First get the data then redux gives us isFetching state. Pass in 10 to get 10 cryptos.
   const globalStats = data?.data?.stats; // we create a global stats object to use the data
 
-  if(isFetching) return 'Loading... ';
+  if(isFetching) return <Loader />;
   // console.log(data);
 
   return (
