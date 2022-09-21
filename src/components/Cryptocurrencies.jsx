@@ -7,7 +7,7 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 import Loader from './Loader';
 
 const Cryptocurrencies = ({ simplified }) => {
-  const count = simplified ? 10 : 100;//If simplified is true, count will be 10. Else count will be 100.
+  const count = simplified ? 20 : 100;//If simplified is true, count will be 10. Else count will be 100.
   const { data: cryptosList, isFetching } = useGetCryptosQuery(count);//destructure the data and rename to cryptosList then get isFetching state from redux and pass count to query
   const [cryptos, setCryptos] = useState([]);// create new state cryptos which has starting value equal to a list of all 100 cryptos
   const [searchTerm, setSearchTerm] = useState('');// state for crypto search input

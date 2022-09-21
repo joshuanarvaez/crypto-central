@@ -20,17 +20,20 @@ const cryptoApiHeaders = {
             getExchanges: builder.query({
               query: () => createRequest(`/exchanges`)//Endpoint 2
           }),
+            getExchangeDetails: builder.query({
+            query: () => createRequest(`/exchange/:uuid`)//Endpoint 3
+        }),
             getCryptoDetails: builder.query({
-              query: (coinId) => createRequest(`/coin/${coinId}`)//Endpoint 3: Pass coinId into the query - to render our CryptoDetails component.
+              query: (coinId) => createRequest(`/coin/${coinId}`)//Endpoint 4: Pass coinId into the query - to render our CryptoDetails component.
             }),
             getCryptoHistory: builder.query({
-            query: ({ coinId, timePeriod }) => createRequest(`coin/${coinId}/history?timeperiod=${timePeriod}`)//Endpoint 4: Pass coinId and timeperiod into the query - to render our Line Charts component.
+            query: ({ coinId, timePeriod }) => createRequest(`coin/${coinId}/history?timeperiod=${timePeriod}`)//Endpoint 5: Pass coinId and timeperiod into the query - to render our Line Charts component.
             })
         })
   });
 
   // exporting the call above is formatted as follows
   export const {
-    useGetCryptosQuery, useGetExchangesQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery
+    useGetCryptosQuery, useGetExchangeDetailsQuery, useGetExchangesQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery
   } = cryptoApi;
   
