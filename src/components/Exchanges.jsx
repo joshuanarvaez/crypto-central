@@ -11,12 +11,13 @@ const { Text } = Typography;
 const { Panel } = Collapse;
 
 const Exchanges = () => {
+
   const { data, isFetching } = useGetExchangesQuery();
   const exchangesList = data?.data?.exchanges;
 
-  const { data: exchangeDescription } = useGetExchangeDetailsQuery();
-  const exchangeDesc = data?.data?.exchange;
-  
+  const { data: exchangeDesc } = useGetExchangeDetailsQuery();
+  const exchangeDescription = exchangeDesc?.exchange?.description;
+ 
   if (isFetching) return <Loader />;
 
   return (
@@ -47,7 +48,7 @@ const Exchanges = () => {
                   </Row>
                   )}
               >
-                {HTMLReactParser(exchange.description || '')}
+                {HTMLReactParser(exchangeDescription || '')}
               </Panel>
             </Collapse>
           </Col>

@@ -13,6 +13,8 @@ ChartJS.org - create charts
 for styling
 # @ant-design/icons   
 for icons 
+# @craco/craco & craco-less
+to help load less styles and modify variables
 # axios   
 for api requests
 # chart.js    

@@ -35,7 +35,7 @@ const Cryptocurrencies = ({ simplified }) => {
         - which is when only 10 cryptos are listed. Now, search will not display unless user clicks "Show More"  */}
 
       {!simplified && (<div className="search-crypto"> {/* 5 & 6 */}
-        <Input placeholder="Search Cryptocurrency" onChange={(e) => setSearchTerm(e.target.value)} />
+        <Input placeholder="Search a cryptocurrency" onChange={(e) => setSearchTerm(e.target.value)} />
       </div>)}
       <Row gutter={[32, 32]} className='crypto-card-container'> {/* 1 */}
         {cryptos?.map((coin) => (
@@ -60,4 +60,4 @@ const Cryptocurrencies = ({ simplified }) => {
   )
 }
 
-export default Cryptocurrencies
+export default Cryptocurrencies;
