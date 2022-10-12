@@ -41,9 +41,7 @@ const CryptoDetails = () => {
   ];
   // console.log(data);
   
-// COINHISTORY BELOW
-console.log(coinHistory);
-// COINHISTORY ABOVE
+// console.log(coinHistory);
 
   return (
     <Col className="coin-detail-container">
