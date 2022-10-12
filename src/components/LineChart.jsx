@@ -10,10 +10,13 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinTimestamp = [];
 
     // Loop over prices and push. Repeat for timestamps.
-  for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
-    coinPrice.push(coinHistory.data.history[i].price);
-    coinTimestamp.push(new Date(coinHistory.data.history[i].timestamp).toLocaleDateString());
-  }
+    for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
+      coinPrice.push(coinHistory.data.history[i].price);
+    }
+  
+    for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
+      coinTimestamp.push(new Date(coinHistory.data.history[i].timestamp*1000).toLocaleDateString());
+    }
   
   const data = {
     labels: coinTimestamp,
@@ -22,8 +25,8 @@ const LineChart = ({ coinHistory, currentPrice, coinName }) => {
         label: 'Price In USD',
         data: coinPrice,
         fill: false,
-        backgroundColor: '#0071bd',
-        borderColor: '#0071bd',
+        backgroundColor: '#d4b107',
+        borderColor: '#d4b107',
       }
     ]
   }

@@ -39,7 +39,11 @@ const CryptoDetails = () => {
     { title: 'Total Supply', value: `$ ${cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total)}`, icon: <ExclamationCircleOutlined /> },
     { title: 'Circulating Supply', value: `$ ${cryptoDetails?.supply?.circulating && millify(cryptoDetails?.supply?.circulating)}`, icon: <ExclamationCircleOutlined /> },
   ];
-  console.log(data);
+  // console.log(data);
+  
+// COINHISTORY BELOW
+console.log(coinHistory);
+// COINHISTORY ABOVE
 
   return (
     <Col className="coin-detail-container">
@@ -105,7 +109,6 @@ const CryptoDetails = () => {
           ))}
           </Col>
     </Col>
-
   );
 };
 

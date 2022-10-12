@@ -15,7 +15,7 @@ const demoImage = 'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=Ne
 
 const News = ({ simplified }) => {
   const [ newsCategory, setNewsCategory ] = useState('Cryptocurrency');
-  const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 30 }); //if simplified, show 6 articles. Else show 30.
+  const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 9 : 30 }); //if simplified, show 6 articles. Else show 30.
   const { data } = useGetCryptosQuery(100); //bring this query over so we can filter through data of 100 cryptocurrency options on our news select
 
   if(!cryptoNews?.value) return <Loader />;

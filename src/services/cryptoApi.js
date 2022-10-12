@@ -27,7 +27,7 @@ const cryptoApiHeaders = {
               query: (coinId) => createRequest(`/coin/${coinId}`)//Endpoint 4: Pass coinId into the query - to render our CryptoDetails component.
             }),
             getCryptoHistory: builder.query({
-            query: ({ coinId, timePeriod }) => createRequest(`coin/${coinId}/history?timeperiod=${timePeriod}`)//Endpoint 5: Pass coinId and timeperiod into the query - to render our Line Charts component.
+            query: ({ coinId, timePeriod }) => createRequest(`coin/${coinId}/history?timePeriod=${timePeriod}`)//Endpoint 5: Pass coinId and timeperiod into the query - to render our Line Charts component.
             })
         })
   });

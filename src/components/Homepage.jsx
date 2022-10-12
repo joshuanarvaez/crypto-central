@@ -32,7 +32,7 @@ const Homepage = () => {
             <Title level={2} className="home-title">Top 20 Cryptocurrencies in the world</Title>
             <Title level={3} className="show-more"><Link to='/cryptocurrencies'> Show More</Link></Title>
         </div>
-        <Cryptocurrencies simplified /> {/* simplifed prop only shows first 10 cryptocurrencies*/}
+        <Cryptocurrencies simplified /> {/* simplifed prop only shows first 20 cryptocurrencies*/}
         <div className="home-heading-container">
             <Title level={2} className="home-title">Latest Crypto News</Title>
             <Title level={3} className="show-more"><Link to='/news'> Show More</Link></Title>
