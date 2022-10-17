@@ -20,9 +20,6 @@ const cryptoApiHeaders = {
             getExchanges: builder.query({
               query: () => createRequest(`/exchanges`)//Endpoint 2
           }),
-            getExchangeDetails: builder.query({
-            query: () => createRequest(`/exchange/:uuid`)//Endpoint 3
-        }),
             getCryptoDetails: builder.query({
               query: (coinId) => createRequest(`/coin/${coinId}`)//Endpoint 4: Pass coinId into the query - to render our CryptoDetails component.
             }),
@@ -36,4 +33,3 @@ const cryptoApiHeaders = {
   export const {
     useGetCryptosQuery, useGetExchangeDetailsQuery, useGetExchangesQuery, useGetCryptoDetailsQuery, useGetCryptoHistoryQuery
   } = cryptoApi;
-  

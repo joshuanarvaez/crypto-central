@@ -1,23 +1,16 @@
 import React from 'react'
-
 import millify from 'millify';
-import { Collapse, Row, Col, Typography, Avatar } from 'antd';
-import HTMLReactParser from 'html-react-parser';
-
-import { useGetExchangeDetailsQuery, useGetExchangesQuery } from '../services/cryptoApi';
+import { Collapse, Row, Col, Typography, Avatar, Card } from 'antd';
+import { useGetExchangesQuery } from '../services/cryptoApi';
 import Loader from './Loader';
 
 const { Text } = Typography;
 const { Panel } = Collapse;
 
 const Exchanges = () => {
-
   const { data, isFetching } = useGetExchangesQuery();
   const exchangesList = data?.data?.exchanges;
 
-  const { data: exchangeDesc } = useGetExchangeDetailsQuery();
-  const exchangeDescription = exchangeDesc?.exchange?.description;
- 
   if (isFetching) return <Loader />;
 
   return (
@@ -26,12 +19,12 @@ const Exchanges = () => {
         <Col span={6}>Exchanges</Col>
         <Col span={6}>24h Trade Volume</Col>
         <Col span={6}>Markets</Col>
-        <Col span={6}>Change</Col>
+        <Col span={6}>Market Share</Col>
       </Row>
       <Row>
         {exchangesList.map((exchange) => (
           <Col span={24}>
-            <Collapse>
+            <Card>
               <Panel
                 key={exchange.uuid}
                 showArrow={false}
@@ -48,9 +41,8 @@ const Exchanges = () => {
                   </Row>
                   )}
               >
-                {HTMLReactParser(exchangeDescription || '')}
               </Panel>
-            </Collapse>
+            </Card>
           </Col>
         ))}
       </Row>
@@ -59,3 +51,4 @@ const Exchanges = () => {
 };
 
 export default Exchanges;
+
