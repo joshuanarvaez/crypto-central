@@ -7,7 +7,7 @@ This is a React application with in-depth data related to cryptocurrencies inclu
 Redux Toolkit
 Ant Design - create UI - https://ant.design/ 
 ChartJS.org - create charts
-Heroku - deploy
+Vercel - deploy
 
 # Dependencies - npm install
 # antd    
