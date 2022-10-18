@@ -1,7 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
+
 const cryptoApiHeaders = {
-    'X-RapidAPI-Key': '487753a686msh05c960de3e0c08cp15e507jsn67a8fbc22f4b',
+    'X-RapidAPI-Key': process.env.REACT_APP_CRYPTO_API_KEY,
     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
   }
 
@@ -9,6 +10,8 @@ const cryptoApiHeaders = {
 
   // utility function to pass headers to our api calls
   const createRequest = (url) => ({ url, headers: cryptoApiHeaders })
+  
+  console.log(process.env);
 
   export const cryptoApi = createApi({
         reducerPath: 'cryptoApi', // 1) set the path, what is reducer for 
