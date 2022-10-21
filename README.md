@@ -8,6 +8,7 @@ Redux Toolkit
 Ant Design - create UI - https://ant.design/ 
 ChartJS.org - create charts
 Vercel - deploy
+https://jhn-crypto-central.vercel.app/ 
 
 # Dependencies - npm install
 # antd    
