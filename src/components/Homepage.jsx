@@ -15,7 +15,7 @@ const Homepage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);//Call as a hook. First get the data then redux gives us isFetching state. Pass in 10 to get 10 cryptos.
   const globalStats = data?.data?.stats; // we create a global stats object to use the data
 
-  if(isFetching) return <Loader />;
+  if(isFetching) return <Loader />; // If we are fetching data, return loader component. Otherwise, we get an error.
 
   return (
       <>
@@ -29,7 +29,7 @@ const Homepage = () => {
         </Row>
         <div className="home-heading-container">
             <Title level={2} className="home-title">Top 20 Cryptocurrencies in the world</Title>
-            <Title level={3} className="show-more"><Link to='/cryptocurrencies'> Show More</Link></Title>
+            <Title level={3} className="show-more"><Link to='/cryptocurrencies'>Show More</Link></Title>
         </div>
         <Cryptocurrencies simplified /> {/* simplifed prop only shows first 20 cryptocurrencies*/}
         <div className="home-heading-container">

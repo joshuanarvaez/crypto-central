@@ -7,7 +7,6 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 
 import Loader from './Loader';
 
-
 const { Text, Title } = Typography; //destructure so we can say just 'Text' or 'Title'
 const { Option } = Select;
 
@@ -20,11 +19,8 @@ const News = ({ simplified }) => {
 
   if(!cryptoNews?.value) return <Loader />;
 
-  
- 
-
   return (
-      <Row gutter={[24, 24]}>
+      <Row key={''} gutter={[24, 24]}>
         {/* if not simplified - we are viewing all news and not just 6 articles, render a select
             the onChange property allows us to set the state of the select - setNewsCategory - created state above.
             filterOption prop allows user to filter through articles by specific crypto so user can then view articles 

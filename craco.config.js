@@ -1,5 +1,6 @@
 const CracoLessPlugin = require('craco-less');
 
+// This plugin adds Less support. We can use it to create a custom theme or style antd components.
 module.exports = {
   plugins: [
     {

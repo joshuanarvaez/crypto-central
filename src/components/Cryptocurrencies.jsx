@@ -19,27 +19,24 @@ const Cryptocurrencies = ({ simplified }) => {
 
   }, [cryptosList, searchTerm]); // function will run at the start but also anytime the cryptosList or searchTerm value changes
 
-  if (isFetching) return <Loader />;
-
+  if (isFetching) return <Loader />; // if we are fetching data, return Loader component so we don't get an error
 
   return (
     <>
-
-      {/* 1 Create a row with gutters - spaces between the items [top&bottom, left&right] 
-        2 Get every cryptocurrency and instantly return column or columns dependent on screen size.
+      {/* 1 Row with gutters - spaces between the items [top&bottom, left&right] 
+        2 map over every crypto and instantly return column or columns dependent on screen size.
             Since ANTD is based off 24 columns, xs = 1 column, sm = 2 columns, lg = 4 columns. 
         3 Inside the column is a link which links to the crypto id. Inside the link is a card. 
         4 Inside the card is a particular crypto's price, market cap and daily change %
         5 Create a search box and set it's state.
         6 Wrap the search bar in an if statement. We do this to display the search bar only when simplified is true 
         - which is when only 10 cryptos are listed. Now, search will not display unless user clicks "Show More"  */}
-
-      {!simplified && (<div className="search-crypto"> {/* 5 & 6 */}
-        <Input placeholder="Search a Cryptocurrency" onChange={(e) => setSearchTerm(e.target.value)} />
-      </div>)}
+      {!simplified && (<div className="search-crypto"> {/* 6 */}
+        <Input placeholder="Search a Cryptocurrency" onChange={(e) => setSearchTerm(e.target.value)} /> {/* 5 */}
+      </div>)} 
       <Row gutter={[32, 32]} className='crypto-card-container'> {/* 1 */}
-        {cryptos?.map((coin) => (
-          <Col xs={24} sm={12} lg={6} className='crypto-card' key={coin.uuid}> {/* 2 */}
+        {cryptos?.map((coin) => ( // 2
+          <Col xs={24} sm={12} lg={6} className='crypto-card' key={coin.uuid}> 
             <Link key={coin.uuid} to={`/crypto/${coin.uuid}`}> {/* 3 */}
               <Card
                 title={`${coin.rank}. ${coin.name}`}
