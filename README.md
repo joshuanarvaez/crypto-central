@@ -1,45 +1,41 @@
 # Project: Crypto Central
 
-# Description:
-This is a React application with in-depth data related to cryptocurrencies including markets, exchanges, popular news, etc.
+## Table of Contents
 
-# Tools
-Redux Toolkit
-Ant Design - create UI - https://ant.design/ 
-ChartJS.org - create charts
-Vercel - deploy
-https://jhn-crypto-central.vercel.app/ 
+- [Overview](#overview)
+- [Built With](#built-with)
+- [What We Learned](#what-we-learned)
+- [Features](#features)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
-# Dependencies - npm install
-# antd    
-for styling
-# @ant-design/icons   
-for icons 
-# @craco/craco & craco-less
-to help load less styles and modify variables
-# axios   
-for api requests
-# chart.js    
-for charts
-# react-chartjs-2
-to render charts in our application
-# html-react-parser  
-to parse html data
-# millify    
-to transform large numbers into readable strings
-# moment 
-to parse times and dates
+## Overview
+![Alt text](/src/images/screenshot.png?raw=true "Crypto Central Screenshot")
 
-# react-redux 
-# @reduxjs/toolkit 
+ Live demo: https://jn-crypto-central.vercel.app/  
 
-# react-router-dom
+ ### What We Learned
+ 
 
+### Built With
+Rapid API - Coinranking: https://rapidapi.com/Coinranking/api/coinranking1
+Rapid API - Bing News Search: https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1
+React JS: https://reactjs.org/
+Node JS: https://nodejs.org/en/ 
+Ant Design: https://ant.design/ 
+Vercel: https://vercel.com/ 
 
-# API - Rapid API - 2 sources
+## Dependencies
+npm install antd @ant-design/icons react-redux @reduxjs/toolkit axios chart.js html-react-parser millify moment react-chartjs-2 @craco/craco & craco-less react-router-dom
 
-1: Coinranking  https://rapidapi.com/Coinranking/api/coinranking1/ 
-    We use all endpoints in this API to fetch data related to coins, markets and exchanges.
+## Features
+This application enables users to search/filter restaurants and attractions near them. Users can also explore restaurants and attractions anywhere in the world by updating the search box with a new location or simply dragging their cursor on the map. Clicking on the restaurant or attraction card on the map gives the user more information on that particular place. We accomplish this with geolocation, Google Maps API, and Travel Advisor API.
 
-2: Bing News Search     https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1/
-    We use endpoints in this API to fetch crypto related news.
+## Contact
+Website - https://jhn-portfolio.netlify.app/
+LinkedIn - https://www.linkedin.com/in/joshua-narvaez/ 
+
+## Acknowledgements
+Adrian Hajdin - JavascriptMastery JSM
+Github - https://github.com/adrianhajdin/project_cryptoverse
+Project 2: https://www.youtube.com/watch?v=GDa8kZLNhJ4
