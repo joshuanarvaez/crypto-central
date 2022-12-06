@@ -38,7 +38,7 @@ npm install antd @ant-design/icons react-redux @reduxjs/toolkit axios chart.js h
 This application enables users to search/filter through in-depth data related to cryptocurrencies including markets, exchanges, popular news, etc.
 
 ## Contact
-Website - https://jhn-portfolio.netlify.app/
+Website - https://www.wowjoshcodes.com/
 LinkedIn - https://www.linkedin.com/in/joshua-narvaez/ 
 
 ## Acknowledgements
