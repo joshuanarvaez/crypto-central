@@ -31,7 +31,7 @@ Vercel: https://vercel.com/
 npm install antd @ant-design/icons react-redux @reduxjs/toolkit axios chart.js html-react-parser millify moment react-chartjs-2 @craco/craco & craco-less react-router-dom
 
 ## What We Learned
-Managing state with Redux - store.js, API calls with Axios and Redux Toolkit - services, using and customizing AntD styled components, destructuring data and destructuring styled components, deployment - Vercel
+Managing state with Redux - store.js, API calls with Axios and Redux Toolkit - services, using and customizing AntD styled components, destructuring data and destructuring styled components, deployment with Vercel
 
 ## Acknowledgements
 Adrian Hajdin - JavascriptMastery JSM  
