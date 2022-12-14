@@ -34,6 +34,6 @@ npm install antd @ant-design/icons react-redux @reduxjs/toolkit axios chart.js h
 Managing state with Redux - store.js, API calls with Axios and Redux Toolkit - services, using and customizing AntD styled components, destructuring data and destructuring styled components, deployment - Vercel
 
 ## Acknowledgements
-Adrian Hajdin - JavascriptMastery JSM
+Adrian Hajdin - JavascriptMastery JSM  
 Github - https://github.com/adrianhajdin/project_cryptoverse  
 Project 2: https://www.youtube.com/watch?v=GDa8kZLNhJ4
